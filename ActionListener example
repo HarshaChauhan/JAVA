@@ -1,0 +1,35 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class Butt extends Frame implements ActionListener
+{
+TextField t1;
+Button b1;
+
+public Butt()
+{
+setLayout(new FlowLayout());
+t1=new TextField(40);
+b1=new Button("Submit");
+b1.addActionListener(this);
+add(t1);
+add(b1);
+}
+
+public void actionPerformed(ActionEvent e)
+{
+
+if(e.getSource()==b1)
+{
+t1.setText("welcome to awt programming");
+}
+}
+
+
+public static void main(String a[])
+{
+ Butt x=new Butt();
+ x.setSize(1000,1000);
+ x.setVisible(true);
+}
+} 
