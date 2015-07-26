@@ -1,0 +1,27 @@
+import java.awt.*;
+import java.applet.*;
+public class test2 extends Applet
+{
+ Button b1,b2,b3,b4;
+ public void init()
+ {
+  setLayout(new BorderLayout());
+  b1=new Button("First");
+  b2=new Button("Second");
+  b3=new Button("Third");
+  b4=new Button("Fourth");
+  add("East",b1);
+  add("West",b2);
+  add("North",b3);
+  add("South",b4);
+}
+public static void main(String a[])
+{
+Frame f=new Frame();
+test2 x=new test2();
+f.add(x);
+x.init();
+f.setSize(100,100);
+f.setVisible(true);
+}
+}
