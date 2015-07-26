@@ -1,0 +1,39 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class Text1 extends Frame implements ActionListener
+{
+ TextField t1,t2;
+ Button b1;
+ 
+public Text1()
+{
+setLayout(new FlowLayout());
+t1=new TextField(40);
+t2=new TextField(40);
+b1=new Button("Submit");
+b1.addActionListener(this);
+add(t1);
+add(t2);
+add(b1);
+}
+
+public void actionPerformed(ActionEvent e)
+{
+
+if(e.getSource()==b1)
+{
+ String x=t1.getText();
+ StringBuffer y=new StringBuffer(x);
+ String s=new String(y.reverse());
+ t2.setText(s);
+}
+}
+
+public static void main(String a[])
+{
+ Text1 x=new Text1();
+ x.setSize(1000,1000);
+ x.setVisible(true);
+}
+}
